@@ -21,7 +21,7 @@ function onButtonClick(e) {
         if(textArea.innerHTML !== '0'){
             if(e.target.innerHTML === '=') result = textArea.innerHTML + '=' + +eval(textArea.innerHTML).toFixed(5)
             else if(e.target.innerHTML === '!') result = textArea.innerHTML + '!=' + rFact(textArea.innerHTML)
-            else if(e.target.innerHTML === '√') result = '√' + textArea.innerHTML + '=' + Math.sqrt(parseInt(textArea.innerHTML))
+            else if(e.target.innerHTML === '√') result = '√' + textArea.innerHTML + '=' + Math.sqrt(parseInt(textArea.innerHTML)).toFixed(5)
         }
         else{
             if(e.target.innerHTML === '!'){
