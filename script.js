@@ -39,8 +39,7 @@ function onButtonClick(e) {
         t++
         textArea.innerHTML = '0'
         console.log(result)
-    }
-    else if (textArea.innerHTML === '0') {
+    } else if (textArea.innerHTML === '0') {
         if(e.target.innerHTML === '-' || e.target.innerHTML === '+' || e.target.innerHTML === '/' || e.target.innerHTML === '*'){
             textArea.innerHTML += e.target.innerHTML;
             flag = false
