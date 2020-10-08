@@ -40,6 +40,23 @@ function onButtonClick(e) {
         textArea.innerHTML = '0'
         console.log(result)
     }
+    else if (textArea.innerHTML === '0') {
+        if(e.target.innerHTML === '-' || e.target.innerHTML === '+' || e.target.innerHTML === '/' || e.target.innerHTML === '*'){
+            textArea.innerHTML += e.target.innerHTML;
+            flag = false
+        }
+        else{
+            textArea.innerHTML = e.target.innerHTML
+        }
+    } else if (e.target.innerHTML === '-' || e.target.innerHTML === '+' || e.target.innerHTML === '/' || e.target.innerHTML === '*'){
+        if(flag) {
+            textArea.innerHTML += e.target.innerHTML;
+            flag = false
+        }
+    } else{
+        textArea.innerHTML += e.target.innerHTML;
+        flag = true
+    }
 }
 function rFact(num)
 {
